@@ -7,6 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		30BE2F4B1CBB21D100124F10 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 30BE2F241CBB21D100124F10 /* .gitignore */; };
+		30BE2F4C1CBB21D100124F10 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BE2F261CBB21D100124F10 /* AppDelegate.swift */; };
+		30BE2F4D1CBB21D100124F10 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30BE2F271CBB21D100124F10 /* Assets.xcassets */; };
+		30BE2F4E1CBB21D100124F10 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30BE2F281CBB21D100124F10 /* LaunchScreen.storyboard */; };
+		30BE2F4F1CBB21D100124F10 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30BE2F2A1CBB21D100124F10 /* Main.storyboard */; };
+		30BE2F501CBB21D100124F10 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 30BE2F2C1CBB21D100124F10 /* Info.plist */; };
+		30BE2F511CBB21D100124F10 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BE2F2D1CBB21D100124F10 /* ViewController.swift */; };
+		30BE2F521CBB21D100124F10 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 30BE2F311CBB21D100124F10 /* README.md */; };
+		30BE2F531CBB21D100124F10 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 30BE2F331CBB21D100124F10 /* .gitignore */; };
+		30BE2F541CBB21D100124F10 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 30BE2F341CBB21D100124F10 /* LICENSE */; };
+		30BE2F551CBB21D100124F10 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 30BE2F351CBB21D100124F10 /* README.md */; };
+		30BE2F561CBB21D100124F10 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 30BE2F381CBB21D100124F10 /* AppDelegate.m */; };
+		30BE2F571CBB21D100124F10 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30BE2F391CBB21D100124F10 /* Assets.xcassets */; };
+		30BE2F581CBB21D100124F10 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30BE2F3A1CBB21D100124F10 /* LaunchScreen.storyboard */; };
+		30BE2F591CBB21D100124F10 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30BE2F3C1CBB21D100124F10 /* Main.storyboard */; };
+		30BE2F5A1CBB21D100124F10 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 30BE2F3E1CBB21D100124F10 /* Info.plist */; };
+		30BE2F5B1CBB21D100124F10 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 30BE2F3F1CBB21D100124F10 /* main.m */; };
+		30BE2F5C1CBB21D100124F10 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30BE2F411CBB21D100124F10 /* MainViewController.m */; };
+		30BE2F5D1CBB21D100124F10 /* PViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30BE2F431CBB21D100124F10 /* PViewController.m */; };
+		30BE2F5E1CBB21D100124F10 /* Test3DTouchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30BE2F451CBB21D100124F10 /* Test3DTouchViewController.m */; };
+		30BE2F5F1CBB21D100124F10 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30BE2F471CBB21D100124F10 /* ViewController.m */; };
 		73B5293B1CB75DF9009AC59B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 73B5293A1CB75DF9009AC59B /* main.m */; };
 		73B5293E1CB75DF9009AC59B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 73B5293D1CB75DF9009AC59B /* AppDelegate.m */; };
 		73B529441CB75DF9009AC59B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73B529421CB75DF9009AC59B /* Main.storyboard */; };
@@ -23,7 +44,52 @@
 		73B529791CB7B78E009AC59B /* Test111_ThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73B529781CB7B78E009AC59B /* Test111_ThirdViewController.m */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		30BE2F611CBB21D100124F10 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 30BE2F2E1CBB21D100124F10 /* Icons shortcuts.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9FE9B8A31BA75CB60095E5E4;
+			remoteInfo = "Icons shortcuts";
+		};
+		30BE2F641CBB21D100124F10 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 30BE2F481CBB21D100124F10 /* TouchNewAPI.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C0BE2D401BBA366A003CC61D;
+			remoteInfo = TouchNewAPI;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		30BE2F241CBB21D100124F10 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		30BE2F261CBB21D100124F10 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		30BE2F271CBB21D100124F10 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		30BE2F291CBB21D100124F10 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		30BE2F2B1CBB21D100124F10 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		30BE2F2C1CBB21D100124F10 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		30BE2F2D1CBB21D100124F10 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		30BE2F2E1CBB21D100124F10 /* Icons shortcuts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = "Icons shortcuts.xcodeproj"; sourceTree = "<group>"; };
+		30BE2F311CBB21D100124F10 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		30BE2F331CBB21D100124F10 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		30BE2F341CBB21D100124F10 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		30BE2F351CBB21D100124F10 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		30BE2F371CBB21D100124F10 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		30BE2F381CBB21D100124F10 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		30BE2F391CBB21D100124F10 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		30BE2F3B1CBB21D100124F10 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		30BE2F3D1CBB21D100124F10 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		30BE2F3E1CBB21D100124F10 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		30BE2F3F1CBB21D100124F10 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		30BE2F401CBB21D100124F10 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		30BE2F411CBB21D100124F10 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		30BE2F421CBB21D100124F10 /* PViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PViewController.h; sourceTree = "<group>"; };
+		30BE2F431CBB21D100124F10 /* PViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PViewController.m; sourceTree = "<group>"; };
+		30BE2F441CBB21D100124F10 /* Test3DTouchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Test3DTouchViewController.h; sourceTree = "<group>"; };
+		30BE2F451CBB21D100124F10 /* Test3DTouchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Test3DTouchViewController.m; sourceTree = "<group>"; };
+		30BE2F461CBB21D100124F10 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		30BE2F471CBB21D100124F10 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		30BE2F481CBB21D100124F10 /* TouchNewAPI.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = TouchNewAPI.xcodeproj; sourceTree = "<group>"; };
 		73B529361CB75DF9009AC59B /* 3DTouchDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 3DTouchDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		73B5293A1CB75DF9009AC59B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		73B5293C1CB75DF9009AC59B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -60,6 +126,80 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		30BE2F231CBB21D100124F10 /* Static-icon-shortcuts-sample-master */ = {
+			isa = PBXGroup;
+			children = (
+				30BE2F241CBB21D100124F10 /* .gitignore */,
+				30BE2F251CBB21D100124F10 /* Icons shortcuts */,
+				30BE2F2E1CBB21D100124F10 /* Icons shortcuts.xcodeproj */,
+				30BE2F311CBB21D100124F10 /* README.md */,
+			);
+			path = "Static-icon-shortcuts-sample-master";
+			sourceTree = "<group>";
+		};
+		30BE2F251CBB21D100124F10 /* Icons shortcuts */ = {
+			isa = PBXGroup;
+			children = (
+				30BE2F261CBB21D100124F10 /* AppDelegate.swift */,
+				30BE2F271CBB21D100124F10 /* Assets.xcassets */,
+				30BE2F281CBB21D100124F10 /* LaunchScreen.storyboard */,
+				30BE2F2A1CBB21D100124F10 /* Main.storyboard */,
+				30BE2F2C1CBB21D100124F10 /* Info.plist */,
+				30BE2F2D1CBB21D100124F10 /* ViewController.swift */,
+			);
+			path = "Icons shortcuts";
+			sourceTree = "<group>";
+		};
+		30BE2F2F1CBB21D100124F10 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				30BE2F621CBB21D100124F10 /* Icons shortcuts.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		30BE2F321CBB21D100124F10 /* TouchNewAPI-master */ = {
+			isa = PBXGroup;
+			children = (
+				30BE2F331CBB21D100124F10 /* .gitignore */,
+				30BE2F341CBB21D100124F10 /* LICENSE */,
+				30BE2F351CBB21D100124F10 /* README.md */,
+				30BE2F361CBB21D100124F10 /* TouchNewAPI */,
+				30BE2F481CBB21D100124F10 /* TouchNewAPI.xcodeproj */,
+			);
+			path = "TouchNewAPI-master";
+			sourceTree = "<group>";
+		};
+		30BE2F361CBB21D100124F10 /* TouchNewAPI */ = {
+			isa = PBXGroup;
+			children = (
+				30BE2F371CBB21D100124F10 /* AppDelegate.h */,
+				30BE2F381CBB21D100124F10 /* AppDelegate.m */,
+				30BE2F391CBB21D100124F10 /* Assets.xcassets */,
+				30BE2F3A1CBB21D100124F10 /* LaunchScreen.storyboard */,
+				30BE2F3C1CBB21D100124F10 /* Main.storyboard */,
+				30BE2F3E1CBB21D100124F10 /* Info.plist */,
+				30BE2F3F1CBB21D100124F10 /* main.m */,
+				30BE2F401CBB21D100124F10 /* MainViewController.h */,
+				30BE2F411CBB21D100124F10 /* MainViewController.m */,
+				30BE2F421CBB21D100124F10 /* PViewController.h */,
+				30BE2F431CBB21D100124F10 /* PViewController.m */,
+				30BE2F441CBB21D100124F10 /* Test3DTouchViewController.h */,
+				30BE2F451CBB21D100124F10 /* Test3DTouchViewController.m */,
+				30BE2F461CBB21D100124F10 /* ViewController.h */,
+				30BE2F471CBB21D100124F10 /* ViewController.m */,
+			);
+			path = TouchNewAPI;
+			sourceTree = "<group>";
+		};
+		30BE2F491CBB21D100124F10 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				30BE2F651CBB21D100124F10 /* TouchNewAPI.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		30E7B8AC1CB7FB30000DA221 /* Test111(详情) */ = {
 			isa = PBXGroup;
 			children = (
@@ -98,6 +238,8 @@
 				73B529541CB75E70009AC59B /* TestViewController111.m */,
 				73B529681CB7B043009AC59B /* TestViewController222.h */,
 				73B529691CB7B043009AC59B /* TestViewController222.m */,
+				30BE2F231CBB21D100124F10 /* Static-icon-shortcuts-sample-master */,
+				30BE2F321CBB21D100124F10 /* TouchNewAPI-master */,
 				30E7B8AC1CB7FB30000DA221 /* Test111(详情) */,
 				73B529421CB75DF9009AC59B /* Main.storyboard */,
 				73B5294A1CB75DF9009AC59B /* Info.plist */,
@@ -167,6 +309,16 @@
 			mainGroup = 73B5292D1CB75DF9009AC59B;
 			productRefGroup = 73B529371CB75DF9009AC59B /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 30BE2F2F1CBB21D100124F10 /* Products */;
+					ProjectRef = 30BE2F2E1CBB21D100124F10 /* Icons shortcuts.xcodeproj */;
+				},
+				{
+					ProductGroup = 30BE2F491CBB21D100124F10 /* Products */;
+					ProjectRef = 30BE2F481CBB21D100124F10 /* TouchNewAPI.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				73B529351CB75DF9009AC59B /* 3DTouchDemo */,
@@ -174,16 +326,44 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXReferenceProxy section */
+		30BE2F621CBB21D100124F10 /* Icons shortcuts.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = "Icons shortcuts.app";
+			remoteRef = 30BE2F611CBB21D100124F10 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		30BE2F651CBB21D100124F10 /* TouchNewAPI.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = TouchNewAPI.app;
+			remoteRef = 30BE2F641CBB21D100124F10 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
 /* Begin PBXResourcesBuildPhase section */
 		73B529341CB75DF9009AC59B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30BE2F4E1CBB21D100124F10 /* LaunchScreen.storyboard in Resources */,
+				30BE2F4F1CBB21D100124F10 /* Main.storyboard in Resources */,
+				30BE2F541CBB21D100124F10 /* LICENSE in Resources */,
+				30BE2F581CBB21D100124F10 /* LaunchScreen.storyboard in Resources */,
 				73B529731CB7B4C6009AC59B /* result_none.png in Resources */,
+				30BE2F571CBB21D100124F10 /* Assets.xcassets in Resources */,
+				30BE2F4B1CBB21D100124F10 /* .gitignore in Resources */,
+				30BE2F531CBB21D100124F10 /* .gitignore in Resources */,
 				73B529491CB75DF9009AC59B /* LaunchScreen.storyboard in Resources */,
 				73B529721CB7B4C6009AC59B /* oilMoney.png in Resources */,
+				30BE2F5A1CBB21D100124F10 /* Info.plist in Resources */,
 				73B529461CB75DF9009AC59B /* Assets.xcassets in Resources */,
+				30BE2F591CBB21D100124F10 /* Main.storyboard in Resources */,
 				73B529711CB7B4C6009AC59B /* mobileMoney.png in Resources */,
+				30BE2F501CBB21D100124F10 /* Info.plist in Resources */,
+				30BE2F4D1CBB21D100124F10 /* Assets.xcassets in Resources */,
 				73B529441CB75DF9009AC59B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -195,13 +375,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30BE2F5F1CBB21D100124F10 /* ViewController.m in Sources */,
+				30BE2F511CBB21D100124F10 /* ViewController.swift in Sources */,
 				73B5296A1CB7B043009AC59B /* TestViewController222.m in Sources */,
+				30BE2F5E1CBB21D100124F10 /* Test3DTouchViewController.m in Sources */,
 				73B529761CB7B6C4009AC59B /* Test111_SecondViewController.m in Sources */,
 				73B5293E1CB75DF9009AC59B /* AppDelegate.m in Sources */,
+				30BE2F4C1CBB21D100124F10 /* AppDelegate.swift in Sources */,
 				73B529671CB7AE0B009AC59B /* UIView+GetViewController.m in Sources */,
+				30BE2F551CBB21D100124F10 /* README.md in Sources */,
+				30BE2F561CBB21D100124F10 /* AppDelegate.m in Sources */,
 				73B529791CB7B78E009AC59B /* Test111_ThirdViewController.m in Sources */,
 				73B5296D1CB7B1B1009AC59B /* Test111_FirstViewController.m in Sources */,
 				73B529551CB75E70009AC59B /* TestViewController111.m in Sources */,
+				30BE2F5D1CBB21D100124F10 /* PViewController.m in Sources */,
+				30BE2F521CBB21D100124F10 /* README.md in Sources */,
+				30BE2F5B1CBB21D100124F10 /* main.m in Sources */,
+				30BE2F5C1CBB21D100124F10 /* MainViewController.m in Sources */,
 				73B5293B1CB75DF9009AC59B /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -209,6 +399,38 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		30BE2F281CBB21D100124F10 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				30BE2F291CBB21D100124F10 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		30BE2F2A1CBB21D100124F10 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				30BE2F2B1CBB21D100124F10 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		30BE2F3A1CBB21D100124F10 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				30BE2F3B1CBB21D100124F10 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		30BE2F3C1CBB21D100124F10 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				30BE2F3D1CBB21D100124F10 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
 		73B529421CB75DF9009AC59B /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
