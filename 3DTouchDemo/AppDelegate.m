@@ -7,10 +7,9 @@
 //
 
 #import "AppDelegate.h"
-#import "TestViewController111.h"
-#import "TestViewController111.h"
+#import "Test111_FirstViewController.h"
 @interface AppDelegate ()
-
+//http://my.oschina.net/u/2340880/blog/511509#OSC_h4_4
 @end
 
 @implementation AppDelegate
@@ -21,7 +20,18 @@
     [self setShortCutItems];
     return YES;
 }
-
+//- (void)getIsUse3DTouch {
+//    if (self.traitCollection.forceTouchCapability == UIForceTouchCapabilityAvailable)
+//    {
+//        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"您的手机支持3dtouch" message:nil delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+//        [alert show];
+//    }
+//    else
+//    {
+//        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"很遗憾您的手机不支持3dtouch" message:nil delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+//        [alert show];
+//    }
+//}
 /** 创建shortcutItems */
 - (void)setShortCutItems {
     NSMutableArray *shortcutItems = [NSMutableArray array];
@@ -35,6 +45,7 @@
     [[UIApplication sharedApplication] setShortcutItems:shortcutItems];
 }
 
+//echo 'com.qsy.-DTouchDemo' | nc 127.0.0.1 8000
 //检测是从点击app图标还是从touch进入app
 - (void)application:(UIApplication *)application performActionForShortcutItem:(UIApplicationShortcutItem *)shortcutItem completionHandler:(void (^)(BOOL))completionHandler {
     Class cls;
@@ -44,6 +55,9 @@
         case 0:
         { // 手机充值
 //            [[NSNotificationCenter defaultCenter] postNotificationName:@"gotoJumpViewController" object:self userInfo:@{@"type":@"0"}];
+    UIApplication *application = [UIApplication sharedApplication];
+    Test111_FirstViewController *vc = (Test111_FirstViewController *)application.keyWindow.rootViewController;
+            completionHandler(YES);
             // 获取到当前已经在活跃的导航控制器
             cls = NSClassFromString(@"Test111_FirstViewController");
             pushVC = [[cls alloc]init];
