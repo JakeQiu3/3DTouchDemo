@@ -49,7 +49,7 @@
 			<key>UIApplicationShortcutItemType</key>
 			<string>@&quot;3&quot;</string>
 			<key>UIApplicationShortcutItemTitle</key>
-			<string>测试1</string>
+			<string>Info.plist测试1</string>
 			<key>UIApplicationShortcutItemSubtitle</key>
 			<string>1次成功</string>
 			<key>UIApplicationShortcutItemIconType</key>

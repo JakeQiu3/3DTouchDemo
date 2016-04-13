@@ -8,30 +8,21 @@
 
 #import "AppDelegate.h"
 #import "Test111_FirstViewController.h"
+#import "Test111_SecondViewController.h"
+#import "Test111_ThirdViewController.h"
 @interface AppDelegate ()
-//http://my.oschina.net/u/2340880/blog/511509#OSC_h4_4
+{
+     NSInteger selectItem; // 0不做操作， 1:跳转手机充值 2:跳转加油卡充值
+}
 @end
-
+//3dTouch 的网址 http://my.oschina.net/u/2340880/blog/511509#OSC_h4_4
 @implementation AppDelegate
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    //   设置标签数组
     [self setShortCutItems];
     return YES;
 }
-//- (void)getIsUse3DTouch {
-//    if (self.traitCollection.forceTouchCapability == UIForceTouchCapabilityAvailable)
-//    {
-//        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"您的手机支持3dtouch" message:nil delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
-//        [alert show];
-//    }
-//    else
-//    {
-//        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"很遗憾您的手机不支持3dtouch" message:nil delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
-//        [alert show];
-//    }
-//}
 /** 创建shortcutItems */
 - (void)setShortCutItems {
     NSMutableArray *shortcutItems = [NSMutableArray array];
@@ -39,83 +30,90 @@
     NSArray *titleArray = @[@"手机充值",@"加油卡充值",@"维他医生"];
     for (NSInteger i =0; i<3; ++i) {
         UIApplicationShortcutIcon *icon = [UIApplicationShortcutIcon iconWithTemplateImageName:iconArray[i]];
-        UIApplicationShortcutItem *item = [[UIApplicationShortcutItem alloc]initWithType:[NSString stringWithFormat:@"%ld",(long)i] localizedTitle:titleArray[i] localizedSubtitle:nil icon:icon userInfo:nil];
+        UIApplicationShortcutItem *item = [[UIApplicationShortcutItem alloc]initWithType:[NSString stringWithFormat:@"%ld",(long)i+1] localizedTitle:titleArray[i] localizedSubtitle:nil icon:icon userInfo:nil];
+        if (!icon && !item ) {//判断API
+            return;
+        }
         [shortcutItems addObject:item];
     }
     [[UIApplication sharedApplication] setShortcutItems:shortcutItems];
 }
 
-//echo 'com.qsy.-DTouchDemo' | nc 127.0.0.1 8000
 //检测是从点击app图标还是从touch进入app
 - (void)application:(UIApplication *)application performActionForShortcutItem:(UIApplicationShortcutItem *)shortcutItem completionHandler:(void (^)(BOOL))completionHandler {
+//    if (<#condition#>) {//是否登录
+//        <#statements#>
+//    return;交互完后，再调用下面的这个方法，进行跳转
+//    }
     Class cls;
     UIViewController *pushVC;
-    UIViewController *viewController = [self getCurrentVC];
-    switch (shortcutItem.type.integerValue) {
-        case 0:
+    UIViewController *topVC = [self topViewController];
+    selectItem = shortcutItem.type.integerValue;
+    NSLog(@"少 %lu",shortcutItem.type.integerValue);
+    switch (selectItem) {
+        case 0: { // 测试1  info.plist中
+            
+        }   break;
+
+        case 1:
         { // 手机充值
-//            [[NSNotificationCenter defaultCenter] postNotificationName:@"gotoJumpViewController" object:self userInfo:@{@"type":@"0"}];
-    UIApplication *application = [UIApplication sharedApplication];
-    Test111_FirstViewController *vc = (Test111_FirstViewController *)application.keyWindow.rootViewController;
-            completionHandler(YES);
+            if ([topVC.navigationController.topViewController isKindOfClass:[Test111_FirstViewController class]]) {//判断是否已经入栈
+                return;
+            }
             // 获取到当前已经在活跃的导航控制器
             cls = NSClassFromString(@"Test111_FirstViewController");
             pushVC = [[cls alloc]init];
            
         }  break;
             
-        case 1: { // 加油卡充值
-//            [[NSNotificationCenter defaultCenter] postNotificationName:@"gotoJumpViewController" object:self userInfo:@{@"type":@"1"}];
+        case 2: { // 加油卡充值
+            if ([topVC.navigationController.topViewController isKindOfClass:[Test111_SecondViewController class]]) {//判断是否已经入栈
+                return;
+            }
             cls = NSClassFromString(@"Test111_SecondViewController");
             pushVC = [[cls alloc]init];
             
         }   break;
             
-        case 2: { // 医生
-//            [[NSNotificationCenter defaultCenter] postNotificationName:@"gotoJumpViewController" object:self userInfo:@{@"type":@"2"}];
-             cls = NSClassFromString(@"Test111_ThirdViewController");
+        case 3: { // 医生
+            if ([topVC.navigationController.topViewController isKindOfClass:[Test111_ThirdViewController class]]) {//判断是否已经入栈
+                return;
+            }
+            cls = NSClassFromString(@"Test111_ThirdViewController");
             pushVC = [[cls alloc]init];
             
         }   break;
-        case 3: { // 测试1
-//            [[NSNotificationCenter defaultCenter] postNotificationName:@"gotoJumpViewController" object:self userInfo:@{@"type":@"2"}];
-        }   break;
+        
+        
         default:
             break;
     }
     pushVC.hidesBottomBarWhenPushed = YES;
-    [viewController.navigationController pushViewController:pushVC animated:YES];
+    [topVC.navigationController pushViewController:pushVC animated:YES];
+}
+//获取到当前屏幕显示最顶上的UIViewController
+- (UIViewController*)topViewController
+{
+    return [self topViewControllerWithRootViewController:self.window.rootViewController];
 }
 
-//获取当前屏幕显示的viewcontroller
-- (UIViewController *)getCurrentVC
+- (UIViewController*)topViewControllerWithRootViewController:(UIViewController*)rootViewController
 {
-    UIViewController *result = nil;
-    
-    UIWindow * window = [[UIApplication sharedApplication] keyWindow];
-    if (window.windowLevel != UIWindowLevelNormal)
-    {
-        NSArray *windows = [[UIApplication sharedApplication] windows];
-        for(UIWindow * tmpWin in windows)
-        {
-            if (tmpWin.windowLevel == UIWindowLevelNormal)
-            {
-                window = tmpWin;
-                break;
-            }
-        }
+    if ([rootViewController isKindOfClass:[UITabBarController class]]) {
+        UITabBarController *tabBarController = (UITabBarController *)rootViewController;
+        return [self topViewControllerWithRootViewController:tabBarController.selectedViewController];
+    } else if ([rootViewController isKindOfClass:[UINavigationController class]]) {
+        UINavigationController* navigationController = (UINavigationController*)rootViewController;
+        return [self topViewControllerWithRootViewController:navigationController.visibleViewController];
+    } else if (rootViewController.presentedViewController) {
+        UIViewController* presentedViewController = rootViewController.presentedViewController;
+        return [self topViewControllerWithRootViewController:presentedViewController];
+    } else {
+        return rootViewController;
     }
-    
-    UIView *frontView = [[window subviews] objectAtIndex:0];
-    id nextResponder = [frontView nextResponder];
-    
-    if ([nextResponder isKindOfClass:[UIViewController class]])
-        result = nextResponder;
-    else
-        result = window.rootViewController;
-    
-    return result;
 }
+
+
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
     // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
