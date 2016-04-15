@@ -43,12 +43,11 @@
 }
 //加载根视图
 - (void)loadRootViewController {
-    UIViewController *rootViewController;
+//    UIViewController *rootViewController;
 //    if (isLogin) {//是否登录
         //    LoginViewController *loginView = [[LoginViewController alloc]init];
         //    rootViewController = loginView;
-    
-        ////    } else {
+        // } else {
 //    TestViewController111 *testView = [[TestViewController111 alloc]init];
 //    rootViewController = testView;
 //    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
@@ -59,7 +58,7 @@
 //        
 //    });
 //}
-    self.window.rootViewController = rootViewController;
+//    self.window.rootViewController = rootViewController;
         //    已经登录
 }
 //检测是从点击app图标还是从touch进入app
