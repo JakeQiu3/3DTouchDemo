@@ -99,9 +99,9 @@
 				73B529421CB75DF9009AC59B /* Main.storyboard */,
 				73B529531CB75E70009AC59B /* TestViewController111.h */,
 				73B529541CB75E70009AC59B /* TestViewController111.m */,
-				30E7B8AC1CB7FB30000DA221 /* Test111(详情) */,
 				73B529681CB7B043009AC59B /* TestViewController222.h */,
 				73B529691CB7B043009AC59B /* TestViewController222.m */,
+				30E7B8AC1CB7FB30000DA221 /* Test111(详情) */,
 				73B5294A1CB75DF9009AC59B /* Info.plist */,
 				73B529391CB75DF9009AC59B /* Supporting Files */,
 			);
