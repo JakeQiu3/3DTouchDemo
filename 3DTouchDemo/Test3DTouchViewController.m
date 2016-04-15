@@ -8,7 +8,6 @@
 
 #import "Test3DTouchViewController.h"
 #import "PViewController.h"
-
 #import "AppDelegate.h"
 
 @interface Test3DTouchViewController ()
@@ -31,10 +30,6 @@
     // Do any additional setup after loading the view.
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
 -(NSArray<id<UIPreviewActionItem>> *)previewActionItems
 {
