@@ -7,12 +7,14 @@
 //
 
 #import "AppDelegate.h"
+#import "LoginViewController.h"
+#import "TestViewController111.h"
 #import "Test111_FirstViewController.h"
 #import "Test111_SecondViewController.h"
 #import "Test111_ThirdViewController.h"
 @interface AppDelegate ()
 {
-     NSInteger selectItem; // 0不做操作， 1:跳转手机充值 2:跳转加油卡充值
+     NSInteger loginSelectItem; // 登录时：0不做操作， 1:跳转手机充值 2:跳转加油卡充值
 }
 @end
 //3dTouch 的网址 http://my.oschina.net/u/2340880/blog/511509#OSC_h4_4
@@ -21,6 +23,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [self setShortCutItems];
+    [self loadRootViewController];
     return YES;
 }
 /** 创建shortcutItems */
@@ -38,23 +41,49 @@
     }
     [[UIApplication sharedApplication] setShortcutItems:shortcutItems];
 }
-
+//加载根视图
+- (void)loadRootViewController {
+    UIViewController *rootViewController;
+//    if (isLogin) {//是否登录
+        //    LoginViewController *loginView = [[LoginViewController alloc]init];
+        //    rootViewController = loginView;
+    
+        ////    } else {
+//    TestViewController111 *testView = [[TestViewController111 alloc]init];
+//    rootViewController = testView;
+//    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//        if (!loginSelectItem) {
+//            [self pushShortcutViewController:loginSelectItem];
+//            loginSelectItem = 0;
+//        }
+//        
+//    });
+//}
+    self.window.rootViewController = rootViewController;
+        //    已经登录
+}
 //检测是从点击app图标还是从touch进入app
 - (void)application:(UIApplication *)application performActionForShortcutItem:(UIApplicationShortcutItem *)shortcutItem completionHandler:(void (^)(BOOL))completionHandler {
-//    if (<#condition#>) {//是否登录
-//        <#statements#>
-//    return;交互完后，再调用下面的这个方法，进行跳转
-//    }
+////    if (isLogin) {//是否登录
+//    LoginViewController *loginView = [[LoginViewController alloc]init];
+//    self.window.rootViewController = loginView;
+//    loginSelectItem = shortcutItem.type.integerValue;
+//    return;//交互完后，再调用下面的这个方法，进行跳转
+////    }
+//    已经登录
+     [self pushShortcutViewController:shortcutItem.type.integerValue];
+}
+
+- (void)pushShortcutViewController:(NSInteger )selectedItemNum {
+
     Class cls;
     UIViewController *pushVC;
     UIViewController *topVC = [self topViewController];
-    selectItem = shortcutItem.type.integerValue;
-    NSLog(@"少 %lu",shortcutItem.type.integerValue);
-    switch (selectItem) {
+    switch (selectedItemNum) {
         case 0: { // 测试1  info.plist中
             
         }   break;
-
+            
         case 1:
         { // 手机充值
             if ([topVC.navigationController.topViewController isKindOfClass:[Test111_FirstViewController class]]) {//判断是否已经入栈
@@ -63,7 +92,7 @@
             // 获取到当前已经在活跃的导航控制器
             cls = NSClassFromString(@"Test111_FirstViewController");
             pushVC = [[cls alloc]init];
-           
+            
         }  break;
             
         case 2: { // 加油卡充值
@@ -83,14 +112,15 @@
             pushVC = [[cls alloc]init];
             
         }   break;
-        
-        
+            
+            
         default:
             break;
     }
     pushVC.hidesBottomBarWhenPushed = YES;
     [topVC.navigationController pushViewController:pushVC animated:YES];
 }
+
 //获取到当前屏幕显示最顶上的UIViewController
 - (UIViewController*)topViewController
 {
