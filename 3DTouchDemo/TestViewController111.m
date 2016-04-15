@@ -7,8 +7,8 @@
 //
 
 #import "TestViewController111.h"
-
-@interface TestViewController111 ()<UITableViewDelegate,UITableViewDataSource>
+#import "Test3DTouchViewController.h"
+@interface TestViewController111 ()<UITableViewDelegate,UITableViewDataSource,UIViewControllerPreviewingDelegate>
 {
     UITableView *_tableView;
     NSArray *_dataArray;//文件夹数组
@@ -24,7 +24,18 @@
     [super viewDidLoad];
     [self initData];
     [self setUI];
+    [self check3DTouch];
     // Do any additional setup after loading the view.
+}
+-(void)check3DTouch
+{
+    if(self.traitCollection.forceTouchCapability == UIForceTouchCapabilityAvailable)
+    {
+        //ok
+    }
+    else{
+        //notok
+    }
 }
 
 - (void)initData {
@@ -57,6 +68,9 @@
     if (!cell) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
     }
+    if (indexPath.row == 0 || indexPath.row == 1) {
+        [self registerForPreviewingWithDelegate:self sourceView:cell];
+    }
     cell.textLabel.text = [NSString stringWithFormat:@"%li : %@",(long)indexPath.row,_dataArray[indexPath.row]];
     return cell;
 }
@@ -73,6 +87,24 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+
+#pragma mark - UIViewControllerPreviewingDelegate
+- (UIViewController *)previewingContext:(id<UIViewControllerPreviewing>)previewingContext viewControllerForLocation:(CGPoint)location {
+    NSIndexPath *indexPath = [_tableView indexPathForCell:(UITableViewCell* )[previewingContext sourceView]];
+    NSArray *arr = @[@"1",@"2",@"3"];
+    NSArray *colorArr = @[[UIColor redColor],[UIColor greenColor],[UIColor blackColor]];
+    
+    Test3DTouchViewController *childVC = [[Test3DTouchViewController alloc] initWithTitle:arr[indexPath.row] bgColor:colorArr[indexPath.row]];
+    childVC.preferredContentSize = CGSizeMake(0.0f,600.f);
+    return childVC;
+}
+
+- (void)previewingContext:(id <UIViewControllerPreviewing>)previewingContext commitViewController:(UIViewController *)viewControllerToCommit
+{
+//    [self.navigationController pushViewController:viewControllerToCommit animated:YES];
+    [self.navigationController showViewController:viewControllerToCommit sender:self];
 }
 
 @end
