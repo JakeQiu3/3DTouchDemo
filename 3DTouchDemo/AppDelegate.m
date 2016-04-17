@@ -17,7 +17,7 @@
      NSInteger loginSelectItem; // 登录时：0不做操作， 1:跳转手机充值 2:跳转加油卡充值
 }
 @end
-//3dTouch 的网址 http://my.oschina.net/u/2340880/blog/511509#OSC_h4_4
+#warning 少  3dTouch 的博客网址 http://my.oschina.net/u/2340880/blog/511509#OSC_h4_4
 @implementation AppDelegate
 
 
