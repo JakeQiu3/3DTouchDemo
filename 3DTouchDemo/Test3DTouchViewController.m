@@ -37,7 +37,7 @@
 
         PViewController *aaaa = [[PViewController alloc] init];
         aaaa.view.backgroundColor = [UIColor orangeColor];
-        [[self topViewController] presentViewController:aaaa animated:YES completion:nil];
+        [[self topViewController].navigationController pushViewController:aaaa animated:YES];
     }];
 
     UIPreviewAction * action2 = [UIPreviewAction actionWithTitle:@"丑" style:0 handler:^(UIPreviewAction * _Nonnull action, UIViewController * _Nonnull previewViewController) {
